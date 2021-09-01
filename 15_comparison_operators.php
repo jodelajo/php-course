@@ -6,8 +6,8 @@
 </head>
 <body>
 
-<!--
 
+<!-- 
   <h2>Comparison Operators</h2>
   <pre>
       
@@ -27,8 +27,8 @@
      Or  ||
     Not  !
       
-</pre>
--->
+</pre> -->
+
 
 
 <?php 

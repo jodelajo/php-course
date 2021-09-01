@@ -30,7 +30,7 @@ echo $sum;
 }
 
 
-addNumbers(345,3462);
+addNumbers(3,6);
     
 ?>
 

@@ -2,46 +2,34 @@
 
 if(isset($_POST['submit'])) {
     
-$name = array("Edwin", "Student", "Peter", "Samid", "Mohad", "Maria", "Jane", "tom");
+$name = ["Edwin", "Student", "Peter", "Samid", "Mohad", "Maria", "Jane", "tom"];
     
-    $minimun = 5;
-    $maximun = 10;
+    $minimum = 5;
+    $maximum = 10;
 
 $username = $_POST['username'];
 $password = $_POST['password'];
     
-  if(strlen($username) < $minimun ) {
-  
+  if(strlen($username) < $minimum ) {
       echo "Username has to be longer than five";
-  
   }  
     
-    if(strlen($username) > $maximun  ) {
-  
+    if(strlen($username) > $maximum  ) {
       echo "Username cannot be longer than 10 ";
-  
   }  
     
     if(!in_array($username,$name)) {
-    
         echo " Sorry you are not allowed";
-    
     } else {
     
-    echo "Welcome";
+    echo "Welcome " . $username . '<br/>';
+    echo "Your Password is " . $password;
+
     }
+ 
     
-    
-    
-    
-    
-//echo "Hello" . $username;   
-//echo "Your Password is " . $password;
-
-
+// echo "Hello" . $username;   
 }
-
-
 
 ?>
 
@@ -53,9 +41,9 @@ $password = $_POST['password'];
 </head>
 <body>
 
-<form action="form.php" method="post">
+<form action="31_32_33_form.php" method="post">
     
-<input type="text" name="username" placeholder="Enter Username">
+<input type="text" name="username" placeholder="Enter Username"><br>
 <input type="password"  name="password" placeholder="Enter Password"><br>
 <input type="submit" name="submit">
     

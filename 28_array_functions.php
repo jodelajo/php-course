@@ -5,21 +5,29 @@
     <title>Document</title>
 </head>
 <body>
+
 <?php 
-    
-$list = array(1000,20,2,46,5,6,100,8,12,14,16);
+
+$list = [343,34,323,23,54,232,453];
 
 echo max($list);
+//max value
 
 echo "<br>";
-
-echo min($list);
-
-echo "<br>";
-
-sort($list); print_r($list)
-
     
+echo min($list);
+//min value
+
+
+echo "<br>";
+
+sort($list);
+//eerst sorteren dan => print_r
+    
+print_r($list);
+//hele lijst
+
+
 ?>
 
 </body>

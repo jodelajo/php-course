@@ -9,15 +9,13 @@
 <?php 
 
 function init(){
-
-
 say_Something();
 echo "<br>";
 calculate();  
 
 }
 
-
+init();
 
 
 function calculate(){
@@ -33,7 +31,7 @@ function say_Something(){
 
 }
 
-  init();  
+    
     
     
     

@@ -25,13 +25,20 @@
 		  Step3: Make 2 Arrays with the same values, one regular and the other associative
 
 		  Step4: Make a constant and set it to the value of PHP. and use an echo to print it out
-
-
-			
-
 			 */
 
-		
+		$number1 = 10;
+		$number2 = 20;
+		$array1 = [10];
+		$array2 =["first_number" => 10];
+
+		echo $number1 + $number2;
+		echo '<br>';
+		echo $array2["first_number"];
+
+	
+	
+
 
 
 		?>

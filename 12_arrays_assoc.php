@@ -19,10 +19,10 @@ echo "<br>";
 // Associative Array Below
 
 $names = array("first_name" => 'Edwin', "Last_Name" => 'Diaz' );
-
+$names2 = ["first_name" => 'Edwin', "Last_Name" => 'Diaz'] ;
 //print_r($names);
 
-echo $names['first_name'] . " " . $names['Last_Name'];
+echo $names2['first_name'] . " " . $names2['Last_Name'];
     
     
 ?>
