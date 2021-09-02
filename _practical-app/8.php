@@ -26,7 +26,18 @@
 		Step 4 - echo the variable
 
 	*/
+
+	$variable = "Goedemorgen zonder zorgen";
 	
+		$hashFormat = "$2y$10$";
+        $salt = "iusesomecrazystrings22";
+        $hashF_and_salt = $hashFormat . $salt;
+        $variable = crypt($variable, $salt);
+		$superVariable = crypt($variable, $hashF_and_salt);
+	
+		echo $variable . "<br/>";
+
+		echo $superVariable;
 	?>
 
 
