@@ -1,13 +1,12 @@
 <?php include "db.php"; ?>
 <?php include "functions.php";?>
+<?php deleteRows();?>
 
-<?php updateTable();?>
-
-<?php  include "includes/header.php"; ?>
+<?php include "includes/header.php"; ?>
 <main class="container">
     <div clas="col-sm-6">
-    <form action="login_update.php" method="post">
-    <h1 class="text-center">Update</h1>
+    <form action="login_delete.php" method="post">
+    <h2 class="text-center">Delete</h2>
         <div class="mb-3">
             <label for="username">Username</label>
             <input type="text" name="username" class="form-control">
@@ -18,11 +17,13 @@
         </div>
         <div class="mb-3">
         <select name="id" id="">
-            <?php  showAllData(); ?>
+        <?php showAllData(); ?>
         </select>
         </div>
-        <input class="btn btn-primary" type="submit" name="submit" value="UPDATE">
+        <input class="btn btn-primary" type="submit" name="submit" value="DELETE">
     </form>
+
     </div>
 </main>
+
 <?php include "includes/footer.php"; ?>

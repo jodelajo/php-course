@@ -1,7 +1,38 @@
 <?php include "functions.php" ?>
-<?php include "includes/header.php" ?>
     
+<?php
+$connection = mysqli_connect('localhost', 'root', '', 'section_seven');
+if(!$connection) {
+	global $connection;
+    die("fail") . mysqli_error($connection);
+} 
 
+function showAllData() {
+    global $connection;
+    $query = "SELECT * FROM  USERS";
+    $result = mysqli_query($connection, $query);
+    if(!$result) {
+        die( "failed" . mysqli_error($connection));
+    }
+    while($row = mysqli_fetch_assoc($result)) {
+        $id = $row['id'];
+        echo "<option value='$id'>$id</option>";
+    } 
+}
+
+function readData() {
+    global $connection;
+    $query = "SELECT * FROM  USERS";
+    $result = mysqli_query($connection, $query);
+    if(!$result) {
+        die( "failed" . mysqli_error($connection));
+}
+    while($row = mysqli_fetch_assoc($result)) {
+                print_r($row);
+    }
+}
+?>
+<?php include "includes/header.php" ?>
 	<section class="content">
 
 		<aside class="col-xs-4">
@@ -27,12 +58,10 @@
 		Step 4 - Connect to Database and read data
 
 */
-	
-	?>
-
-
-
-
+?>
+<pre>
+	<?php readData(); ?>
+</pre>
 
 </article><!--MAIN CONTENT-->
 
